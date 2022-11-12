@@ -1,4 +1,4 @@
-﻿namespace LearnLiveMAUI;
+﻿namespace Phoneword;
 
 public partial class MainPage : ContentPage
 {
@@ -7,11 +7,11 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-	}
+    }
 
 	private void OnCounterClicked(object sender, EventArgs e)
 	{
-		count++;
+		count+=5;
 
 		if (count == 1)
 			CounterBtn.Text = $"Clicked {count} time";

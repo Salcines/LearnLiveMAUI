@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace LearnLiveMAUI;
+namespace Phoneword;
 
 [Application]
 public class MainApplication : MauiApplication
