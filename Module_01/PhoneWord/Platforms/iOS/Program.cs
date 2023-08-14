@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace LearnLiveMAUI;
+namespace Phoneword;
 
 public class Program
 {

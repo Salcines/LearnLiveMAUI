@@ -1,8 +1,8 @@
 ﻿<maui:MauiWinUIApplication
-    x:Class="LearnLiveMAUI.WinUI.App"
+    x:Class="Phoneword.WinUI.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:maui="using:Microsoft.Maui"
-    xmlns:local="using:LearnLiveMAUI.WinUI">
+    xmlns:local="using:Phoneword.WinUI">
 
 </maui:MauiWinUIApplication>

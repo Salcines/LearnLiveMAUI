@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace LearnLiveMAUI;
+namespace Phoneword;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

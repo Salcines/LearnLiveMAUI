@@ -1,4 +1,4 @@
-﻿namespace LearnLiveMAUI;
+﻿namespace Phoneword;
 
 public static class MauiProgram
 {
