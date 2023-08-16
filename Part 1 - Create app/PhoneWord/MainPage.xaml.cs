@@ -35,7 +35,21 @@ public partial class MainPage : ContentPage
 				"YES",
 				"NO"))
 		{
-			// TODO: Call number
+			try
+			{
+				if (PhoneDialer.Default.IsSupported)
+				{
+					PhoneDialer.Default.Open(translateNumber);
+				}
+			}
+			catch (ArgumentNullException)
+			{
+				await DisplayAlert("No es posible marcar", "El número de teléfono no es válido", "OK");
+			}
+			catch (Exception)
+			{
+				await DisplayAlert("Imposible marcar", "El marcado ha fallado", "OK");
+			}
 		}
 	}
 }

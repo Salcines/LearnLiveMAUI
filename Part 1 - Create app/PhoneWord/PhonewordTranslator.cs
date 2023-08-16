@@ -4,7 +4,7 @@ namespace Core;
 
 public static class PhonewordTranslator
 {
-	private static readonly string[] digits =
+	private static readonly string[] Digits =
 	{
 		"ABC",
 		"DEF",
@@ -52,9 +52,9 @@ public static class PhonewordTranslator
 
 	private static int? TranslateToNumbers(char numbers)
 	{
-		for (int i = 0; i < digits.Length; i++)
+		for (int i = 0; i < Digits.Length; i++)
 		{
-			if (digits[i].Contains(numbers))
+			if (Digits[i].Contains(numbers))
 			{
 				return i + 2;
 			}
