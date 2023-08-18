@@ -1,8 +1,9 @@
-﻿namespace Phoneword;
+﻿using Translate = Phoneword.Resources.Languages.AppTranslation;
+namespace Phoneword;
 
 public partial class MainPage : ContentPage
 {
-	private string translateNumber;
+	private string _translateNumber;
 
 	public MainPage()
 	{
@@ -13,42 +14,42 @@ public partial class MainPage : ContentPage
 	{
 		string inputNumber = PhoneNumberText.Text;
 
-		translateNumber = Core.PhonewordTranslator.ToNumber(inputNumber);
+		_translateNumber = Core.PhonewordTranslator.ToNumber(inputNumber);
 
-		if (!string.IsNullOrWhiteSpace(translateNumber))
+		if (!string.IsNullOrWhiteSpace(_translateNumber))
 		{
 			CallNumber.IsEnabled = true;
-			CallNumber.Text      = $"Llamar al {translateNumber}";
+			CallNumber.Text      = $"{Translate.Button_Call} {_translateNumber}";
 		}
 		else
 		{
 			CallNumber.IsEnabled = false;
-			CallNumber.Text      = "Llamar";
+			CallNumber.Text      = Translate.Button_Call;
 		}
 	}
 
 	private async void OnCall(object sender, EventArgs e)
 	{
 		if (await this.DisplayAlert(
-				"Marcar el número",
-				$"Desea llamar al {translateNumber}",
-				"YES",
+				$"{Translate.Call_PopUp_Title}",
+				$"{Translate.Call_PopUp_Title} {_translateNumber}",
+				$"{Translate.Accept}",
 				"NO"))
 		{
 			try
 			{
 				if (PhoneDialer.Default.IsSupported)
 				{
-					PhoneDialer.Default.Open(translateNumber);
+					PhoneDialer.Default.Open(_translateNumber);
 				}
 			}
 			catch (ArgumentNullException)
 			{
-				await DisplayAlert("No es posible marcar", "El número de teléfono no es válido", "OK");
+				await DisplayAlert($"{Translate.Error_PopUp_Title}", $"{Translate.ErrorNull_PopUp_Message}", "OK");
 			}
 			catch (Exception)
 			{
-				await DisplayAlert("Imposible marcar", "El marcado ha fallado", "OK");
+				await DisplayAlert($"{Translate.Error_PopUp_Title}", $"{Translate.ErrorGen_PopUp_Message}", "OK");
 			}
 		}
 	}

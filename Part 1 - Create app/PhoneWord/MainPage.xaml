@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:properties="clr-namespace:Phoneword.Resources.Languages"
              x:Class="Phoneword.MainPage">
 
 	<VerticalStackLayout
@@ -8,7 +9,7 @@
             Padding="20">
 
         <Label
-	        Text="Introduce una palabra telefónica"
+	        Text="{x:Static properties:AppTranslation.Title}"
 	        FontSize="20"/>
 
         <Entry
@@ -17,12 +18,12 @@
 
 		<Button
 			x:Name="TranslateButton"
-			Text="Traducir"
+			Text="{x:Static properties:AppTranslation.Button_Translate}"
 			Clicked="OnTranslate"/>
 
 		<Button
 			x:Name="CallNumber"
-			Text="Llamar"
+			Text="{x:Static properties:AppTranslation.Button_Call}"
 			IsEnabled="False"
 			Clicked="OnCall"/>
 
