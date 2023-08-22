@@ -4,7 +4,7 @@ In the initial state, we have a UI defined through C# code, and the objective is
 
 1. Generate the same UI through XAML Page as we can see next.
 
-![Notes UI](Notes/Resources/Images/Notes_UI.png)
+![Notes UI](Notes/Resources/Images/notes_ui.png)
 
 2. Customize the color of the UI components like show the next image
 
