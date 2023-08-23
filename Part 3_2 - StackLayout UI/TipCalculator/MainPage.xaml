@@ -5,48 +5,79 @@
              xmlns:properties = "clr-namespace:TipCalculator.Resources.Languages"
              x:Class="TipCalculator.MainPage">
 
-    <VerticalStackLayout>
+	<VerticalStackLayout Padding="40" Spacing="10">
 
-        <Label Text="{x:Static properties:Localization.Bill_Label}"/>
-        <Entry
+		<HorizontalStackLayout Spacing="10">
+			<Label 
+				Text="{x:Static properties:Localization.Bill_Label}"
+				WidthRequest="100"
+				VerticalOptions="Center"/>
+			<Entry
 	        x:Name="BillInput"
 	        Placeholder="{x:Static properties:Localization.Bill_Placeholder}"/>
+		</HorizontalStackLayout>
 
-        <Label Text="{x:Static properties:Localization.Tip_Label}"/>
-        <Label 
-	        x:Name="TipOutput"
-	        Text="0.00"/>
+		<HorizontalStackLayout Margin="0,20,0,0" Spacing="10">
+			<Label 
+				Text="{x:Static properties:Localization.Tip_Label}"
+				WidthRequest="100"/>
+			<Label 
+				x:Name="TipOutput"
+				Text="0.00"/>
+		</HorizontalStackLayout>
 
-        <Label Text="Total"/>
-        <Label
-	        x:Name="TotalOutput"
-	        Text="0.00"/>
+		<HorizontalStackLayout Spacing="10">
+			<Label
+				Text="Total"
+				WidthRequest="100"/>
+			<Label
+				x:Name="TotalOutput"
+				Text="0.00"/>
+		</HorizontalStackLayout>
 
-        <Label Text="{x:Static properties:Localization.Percentage_Label}"/>
-        <Label
-	        x:Name="TipPercent"
-	        Text="15%"/>
-        <Slider
-	        x:Name="TipPercentSlider"
+		<HorizontalStackLayout VerticalOptions="End" Spacing="10">
+			<Label
+				Text="{x:Static properties:Localization.Percentage_Label}"
+				WidthRequest="100"/>
+			<Label
+				x:Name="TipPercent"
+				Text="15%"/>
+		</HorizontalStackLayout>
+
+		<Slider
+			x:Name="TipPercentSlider"
 	        Minimum="0"
 	        Maximum="100"
 			Value="15"/>
 
-        <Button
-	        Text="15%"
-	        Clicked="OnNormalTip"/>
+		<HorizontalStackLayout Margin="0,20,0,0" Spacing="10">
+			<Button
+				WidthRequest="150"
+				HorizontalOptions="Center"
+				Text="15%"
+				Clicked="OnNormalTip"/>
 
-        <Button
-	        Text="20%"
-	        Clicked="OnGenerousTip"/>
+			<Button
+				WidthRequest="150"
+				HorizontalOptions="Center"
+				Text="20%"
+				Clicked="OnGenerousTip"/>
+		</HorizontalStackLayout>
 
-        <Button
-	        x:Name="RoundDown"
-	        Text="{x:Static properties:Localization.RoundDown_Button}"/>
+		<HorizontalStackLayout Spacing="10">
+			<Button
+			WidthRequest="150"
+			HorizontalOptions="Center"
+			x:Name="RoundDown"
+			Text="{x:Static properties:Localization.RoundDown_Button}"/>
 
-		<Button
+			<Button
+			WidthRequest="150"
+			HorizontalOptions="Center"
 			x:Name="RoundUp"
 			Text="{x:Static properties:Localization.RoundUp_Button}"/>
-    </VerticalStackLayout>
+		</HorizontalStackLayout>
+
+	</VerticalStackLayout>
 
 </ContentPage>
