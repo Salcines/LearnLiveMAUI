@@ -1,6 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TipCalculator"
+             xmlns:properties = "clr-namespace:TipCalculator.Resources.Languages"
              x:Class="TipCalculator.MainPage">
+
+    <VerticalStackLayout>
+
+        <Label Text="{x:Static properties:Localization.Bill_Label}"/>
+        <Entry
+	        x:Name="BillInput"
+	        Placeholder="{x:Static properties:Localization.Bill_Placeholder}"/>
+
+        <Label Text="{x:Static properties:Localization.Tip_Label}"/>
+        <Label 
+	        x:Name="TipOutput"
+	        Text="0.00"/>
+
+        <Label Text="Total"/>
+        <Label
+	        x:Name="TotalOutput"
+	        Text="0.00"/>
+
+        <Label Text="{x:Static properties:Localization.Percentage_Label}"/>
+        <Label
+	        x:Name="TipPercent"
+	        Text="15%"/>
+        <Slider
+	        x:Name="TipPercentSlider"
+	        Minimum="0"
+	        Maximum="100"
+			Value="15"/>
+
+        <Button
+	        Text="15%"
+	        Clicked="OnNormalTip"/>
+
+        <Button
+	        Text="20%"
+	        Clicked="OnGenerousTip"/>
+
+        <Button
+	        x:Name="RoundDown"
+	        Text="{x:Static properties:Localization.RoundDown_Button}"/>
+
+		<Button
+			x:Name="RoundUp"
+			Text="{x:Static properties:Localization.RoundUp_Button}"/>
+    </VerticalStackLayout>
 
 </ContentPage>
