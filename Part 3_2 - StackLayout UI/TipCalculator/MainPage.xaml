@@ -5,7 +5,7 @@
              xmlns:properties = "clr-namespace:TipCalculator.Resources.Languages"
              x:Class="TipCalculator.MainPage">
 
-	<VerticalStackLayout Padding="40" Spacing="10">
+	<VerticalStackLayout Padding="20" Spacing="10">
 
 		<HorizontalStackLayout Spacing="10">
 			<Label 
@@ -52,13 +52,13 @@
 
 		<HorizontalStackLayout Margin="0,20,0,0" Spacing="10">
 			<Button
-				WidthRequest="150"
+				WidthRequest="125"
 				HorizontalOptions="Center"
 				Text="15%"
 				Clicked="OnNormalTip"/>
 
 			<Button
-				WidthRequest="150"
+				WidthRequest="125"
 				HorizontalOptions="Center"
 				Text="20%"
 				Clicked="OnGenerousTip"/>
@@ -66,13 +66,13 @@
 
 		<HorizontalStackLayout Spacing="10">
 			<Button
-			WidthRequest="150"
+			WidthRequest="125"
 			HorizontalOptions="Center"
 			x:Name="RoundDown"
 			Text="{x:Static properties:Localization.RoundDown_Button}"/>
 
 			<Button
-			WidthRequest="150"
+			WidthRequest="125"
 			HorizontalOptions="Center"
 			x:Name="RoundUp"
 			Text="{x:Static properties:Localization.RoundUp_Button}"/>
