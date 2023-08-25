@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:localization = "using:TipCalculatorGrid.Resources.Localization"
+             x:Class="TipCalculatorGrid.MainPage">
+
+	<VerticalStackLayout>
+		<Label Text="{x:Static localization:Languages.Bill_Label}"/>
+		<Entry
+	        x:Name="BillInput"
+	        Placeholder="{x:Static localization:Languages.Bill_Input_Placeholder}"/>
+
+		<Label
+	        Text="{x:Static localization:Languages.Tip_Label}"/>
+		<Label
+	        x:Name="tipOutput"
+	        Text="0.00"/>
+
+		<Label
+			Text="{x:Static localization:Languages.Tip_Percentage_Label}"/>
+		<Label
+			x:Name="TipPercentage" Text="100%"/>
+		<Slider
+			x:Name="TipPercentageSlider"
+			Minimum="0" Maximum="100"
+			Value="15"/>
+
+		<Button
+			Text="15%"
+			Clicked="OnNormalTip"/>
+		<Button
+			Text="20%"
+			Clicked="OnGenerousTip"/>
+
+		<Button
+			x:Name="RoundDown"
+			Text="{x:Static localization:Languages.RoundDown_Button}"/>
+		<Button
+			x:Name="RoundUp"
+			Text="{x:Static localization:Languages.RoundUp_Button}"/>
+	</VerticalStackLayout>
+
+</ContentPage>
