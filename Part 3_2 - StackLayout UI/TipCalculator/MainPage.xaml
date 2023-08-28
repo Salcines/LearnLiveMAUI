@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TipCalculator"
+             xmlns:properties = "clr-namespace:TipCalculator.Resources.Languages"
+             x:Class="TipCalculator.MainPage">
+
+	<VerticalStackLayout Padding="20" Spacing="10">
+
+		<HorizontalStackLayout Spacing="10">
+			<Label 
+				Text="{x:Static properties:Localization.Bill_Label}"
+				WidthRequest="100"
+				VerticalOptions="Center"/>
+			<Entry
+	        x:Name="BillInput"
+	        Placeholder="{x:Static properties:Localization.Bill_Placeholder}"/>
+		</HorizontalStackLayout>
+
+		<HorizontalStackLayout Margin="0,20,0,0" Spacing="10">
+			<Label 
+				Text="{x:Static properties:Localization.Tip_Label}"
+				WidthRequest="100"/>
+			<Label 
+				x:Name="TipOutput"
+				Text="0.00"/>
+		</HorizontalStackLayout>
+
+		<HorizontalStackLayout Spacing="10">
+			<Label
+				Text="Total"
+				WidthRequest="100"/>
+			<Label
+				x:Name="TotalOutput"
+				Text="0.00"/>
+		</HorizontalStackLayout>
+
+		<HorizontalStackLayout VerticalOptions="End" Spacing="10">
+			<Label
+				Text="{x:Static properties:Localization.Percentage_Label}"
+				WidthRequest="100"/>
+			<Label
+				x:Name="TipPercent"
+				Text="15%"/>
+		</HorizontalStackLayout>
+
+		<Slider
+			x:Name="TipPercentSlider"
+	        Minimum="0"
+	        Maximum="100"
+			Value="15"/>
+
+		<HorizontalStackLayout Margin="0,20,0,0" Spacing="10">
+			<Button
+				WidthRequest="125"
+				HorizontalOptions="Center"
+				Text="15%"
+				Clicked="OnNormalTip"/>
+
+			<Button
+				WidthRequest="125"
+				HorizontalOptions="Center"
+				Text="20%"
+				Clicked="OnGenerousTip"/>
+		</HorizontalStackLayout>
+
+		<HorizontalStackLayout Spacing="10">
+			<Button
+			WidthRequest="125"
+			HorizontalOptions="Center"
+			x:Name="RoundDown"
+			Text="{x:Static properties:Localization.RoundDown_Button}"/>
+
+			<Button
+			WidthRequest="125"
+			HorizontalOptions="Center"
+			x:Name="RoundUp"
+			Text="{x:Static properties:Localization.RoundUp_Button}"/>
+		</HorizontalStackLayout>
+
+	</VerticalStackLayout>
+
+</ContentPage>
