@@ -48,7 +48,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\After.png" />
+	  <None Remove="Resources\Images\after.png" />
 	  <None Remove="Resources\Images\before.png" />
 	</ItemGroup>
 
