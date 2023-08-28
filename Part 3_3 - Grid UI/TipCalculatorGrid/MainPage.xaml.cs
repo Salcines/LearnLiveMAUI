@@ -17,12 +17,32 @@ public partial class MainPage : ContentPage
 		{
 			double percentage = Math.Round(e.NewValue);
 			TipPercentage.Text = $"{percentage}%";
+			CalculateTip(false, false);
 		};
 	}
 
 	private void CalculateTip(bool roundDown, bool roundUp)
 	{
+		if (Double.TryParse(BillInput.Text, out double netBill) && netBill > 0)
+		{
+			double percentage = Math.Round(TipPercentageSlider.Value);
+			double tip = Math.Round(netBill * (percentage / 100.0), 2);
 
+			double totalBill = netBill + tip;
+
+			if (roundUp)
+			{
+				totalBill = Math.Ceiling(totalBill);
+			}
+			else if (roundDown)
+			{
+				totalBill = Math.Floor(totalBill);
+				tip = totalBill - netBill;
+			}
+
+			TipOutput.Text = tip.ToString("C");
+			TotalOutput.Text = totalBill.ToString("C");
+		}
 	}
 
 	private void OnNormalTip(object sender, EventArgs e)

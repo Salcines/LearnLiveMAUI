@@ -4,40 +4,78 @@
              xmlns:localization = "using:TipCalculatorGrid.Resources.Localization"
              x:Class="TipCalculatorGrid.MainPage">
 
-	<VerticalStackLayout>
-		<Label Text="{x:Static localization:Languages.Bill_Label}"/>
+	<Grid RowDefinitions="Auto, Auto, Auto, *, Auto, Auto, Auto"
+	      ColumnDefinitions="*, *"
+	      Padding="40">
+
+		<Label
+			Grid.Row="0" Grid.Column="0"
+			Text="{x:Static localization:Languages.Bill_Label}"/>
 		<Entry
+			Grid.Row="0" Grid.Column="1"
 	        x:Name="BillInput"
+			Keyboard="Numeric"
 	        Placeholder="{x:Static localization:Languages.Bill_Input_Placeholder}"/>
 
 		<Label
+			Grid.Row="1" Grid.Column="0"
 	        Text="{x:Static localization:Languages.Tip_Label}"/>
 		<Label
-	        x:Name="tipOutput"
+			Grid.Row="1" Grid.Column="1"
+	        x:Name="TipOutput"
 	        Text="0.00"/>
 
 		<Label
+			Grid.Row="2" Grid.Column="0"
+			Text="Total"/>
+		<Label
+			Grid.Row="2" Grid.Column="1"
+			x:Name="TotalOutput"
+			Text="0.00"/>
+
+		<Label
+			Grid.Row="3" Grid.Column="0"
+			HorizontalTextAlignment="Start"
+			VerticalTextAlignment="End"
 			Text="{x:Static localization:Languages.Tip_Percentage_Label}"/>
 		<Label
-			x:Name="TipPercentage" Text="100%"/>
+			Grid.Row="3" Grid.Column="1"
+			HorizontalTextAlignment="End"
+			VerticalTextAlignment="End"
+			x:Name="TipPercentage" Text="15%"/>
+			<!-- The property binding text has the same result that write in code-behind the next sentence:
+				double percentage = Math.Round(e.NewValue);
+				TipPercentage.Text = $"{percentage}%";-->
+
+			<!--Text="{Binding Source={x:Reference TipPercentageSlider}, Path=Value,StringFormat='{0}%'}"-->
 		<Slider
+			Grid.Row="4" Grid.Column="0"
+			Grid.ColumnSpan="2"
 			x:Name="TipPercentageSlider"
 			Minimum="0" Maximum="100"
 			Value="15"/>
 
 		<Button
+			Grid.Row="5" Grid.Column="0"
+			Margin="5"
 			Text="15%"
 			Clicked="OnNormalTip"/>
 		<Button
+			Grid.Row="5" Grid.Column="1"
+			Margin="5"
 			Text="20%"
 			Clicked="OnGenerousTip"/>
 
 		<Button
+			Grid.Row="6" Grid.Column="0"
+			Margin="5"
 			x:Name="RoundDown"
 			Text="{x:Static localization:Languages.RoundDown_Button}"/>
 		<Button
+			Grid.Row="6" Grid.Column="1"
+			Margin="5"
 			x:Name="RoundUp"
 			Text="{x:Static localization:Languages.RoundUp_Button}"/>
-	</VerticalStackLayout>
+	</Grid>
 
 </ContentPage>
