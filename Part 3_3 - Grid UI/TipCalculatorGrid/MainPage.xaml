@@ -10,6 +10,7 @@
 
 		<Label
 			Grid.Row="0" Grid.Column="0"
+			VerticalOptions="Center"
 			Text="{x:Static localization:Languages.Bill_Label}"/>
 		<Entry
 			Grid.Row="0" Grid.Column="1"
