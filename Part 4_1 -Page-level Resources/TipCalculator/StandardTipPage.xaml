@@ -15,7 +15,7 @@
 
 	<Grid
 	    x:Name="LayoutRoot"
-	    BackgroundColor="{StaticResource BgColor}"
+	    BackgroundColor="{DynamicResource BgColor}"
 	    Padding="10"
 	    RowDefinitions="Auto, Auto, Auto, Auto,  *"
 	    ColumnDefinitions="*, 3*">
@@ -23,17 +23,17 @@
         <!-- Left column = static labels -->
         <Label Grid.Row="0" Grid.Column="0"
 	        x:Name="BillLabel" Text="{x:Static languages:LocateResources.Bill_Label}"
-	        FontSize="{StaticResource FontSize}" FontAttributes="Bold" TextColor="{StaticResource FgColor}"
+	        FontSize="{StaticResource FontSize}" FontAttributes="Bold" TextColor="{DynamicResource FgColor}"
 	        VerticalOptions="Center"
 	        FontAutoScalingEnabled="True"/>
         <Label Grid.Row="1" Grid.Column="0"
                x:Name="TipLabel" Text="{x:Static languages:LocateResources.Tip_Label}"
-               FontSize="{StaticResource FontSize}" FontAttributes="Bold" TextColor="{StaticResource FgColor}"
+               FontSize="{StaticResource FontSize}" FontAttributes="Bold" TextColor="{DynamicResource FgColor}"
                FontAutoScalingEnabled="True"/>
         <Label Grid.Row="2"
                Grid.Column="0"
                x:Name="TotalLabel" Text="Total"
-               FontSize="{StaticResource FontSize}" FontAttributes="Bold" TextColor="{StaticResource FgColor}"/>
+               FontSize="{StaticResource FontSize}" FontAttributes="Bold" TextColor="{DynamicResource FgColor}"/>
 
         <!-- Right column = user input and calculated-value output-->
         <Entry

@@ -43,23 +43,13 @@ public partial class StandardTipPage : ContentPage
 
 	private void OnLight(object sender, EventArgs e)
 	{
-		LayoutRoot.BackgroundColor = _lightColor;
-
-		TipLabel.TextColor = _darkColor;
-		BillLabel.TextColor = _darkColor;
-		TotalLabel.TextColor = _darkColor;
-		TipOutput.TextColor = _darkColor;
-		TotalOutput.TextColor = _darkColor;
+		Resources["FgColor"] = _darkColor;
+		Resources["BgColor"] = _lightColor;
 	}
 
 	private void OnDark(object sender, EventArgs e)
 	{
-		LayoutRoot.BackgroundColor = _darkColor;
-
-		TipLabel.TextColor = _lightColor;
-		BillLabel.TextColor = _lightColor;
-		TotalLabel.TextColor = _lightColor;
-		TipOutput.TextColor = _lightColor;
-		TotalOutput.TextColor = _lightColor;
+		Resources["FgColor"] = _lightColor;
+		Resources["BgColor"] = _darkColor;
 	}
 }
