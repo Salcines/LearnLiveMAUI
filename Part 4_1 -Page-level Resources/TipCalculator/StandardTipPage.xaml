@@ -4,24 +4,36 @@
              xmlns:languages="clr-namespace:TipCalculator.Resources.Languages"
              x:Class="TipCalculator.StandardTipPage"
              Title="{x:Static languages:LocateResources.Main_Title}">
-    <Grid
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="BgColor">#C0C0C0</Color>
+            <Color x:Key="FgColor">Navy</Color>
+            <x:Double x:Key="FontSize">22</x:Double>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+	<Grid
 	    x:Name="LayoutRoot"
-	    BackgroundColor="Silver"
+	    BackgroundColor="{StaticResource BgColor}"
 	    Padding="10"
 	    RowDefinitions="Auto, Auto, Auto, Auto,  *"
 	    ColumnDefinitions="*, 3*">
 
         <!-- Left column = static labels -->
         <Label Grid.Row="0" Grid.Column="0"
-	        x:Name="BillLabel" Text="{x:Static languages:LocateResources.Bill_Label}" FontSize="22" FontAttributes="Bold" TextColor="Navy"
+	        x:Name="BillLabel" Text="{x:Static languages:LocateResources.Bill_Label}"
+	        FontSize="{StaticResource FontSize}" FontAttributes="Bold" TextColor="{StaticResource FgColor}"
 	        VerticalOptions="Center"
 	        FontAutoScalingEnabled="True"/>
         <Label Grid.Row="1" Grid.Column="0"
-               x:Name="TipLabel" Text="{x:Static languages:LocateResources.Tip_Label}" FontSize="22" FontAttributes="Bold" TextColor="Navy"
+               x:Name="TipLabel" Text="{x:Static languages:LocateResources.Tip_Label}"
+               FontSize="{StaticResource FontSize}" FontAttributes="Bold" TextColor="{StaticResource FgColor}"
                FontAutoScalingEnabled="True"/>
         <Label Grid.Row="2"
                Grid.Column="0"
-               x:Name="TotalLabel" Text="Total" FontSize="22" FontAttributes="Bold" TextColor="Navy"/>
+               x:Name="TotalLabel" Text="Total"
+               FontSize="{StaticResource FontSize}" FontAttributes="Bold" TextColor="{StaticResource FgColor}"/>
 
         <!-- Right column = user input and calculated-value output-->
         <Entry
