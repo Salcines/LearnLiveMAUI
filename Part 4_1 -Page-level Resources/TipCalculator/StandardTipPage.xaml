@@ -10,6 +10,12 @@
             <Color x:Key="BgColor">#C0C0C0</Color>
             <Color x:Key="FgColor">Navy</Color>
             <x:Double x:Key="FontSize">22</x:Double>
+            <Style x:Key="BaseLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="{StaticResource FontSize}"/>
+            </Style>
+            <Style x:Key="InfoLabelStyle" TargetType="Label" BasedOn="{StaticResource BaseLabelStyle}">
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -23,17 +29,20 @@
         <!-- Left column = static labels -->
         <Label Grid.Row="0" Grid.Column="0"
 	        x:Name="BillLabel" Text="{x:Static languages:LocateResources.Bill_Label}"
-	        FontSize="{StaticResource FontSize}" FontAttributes="Bold" TextColor="{DynamicResource FgColor}"
+	        Style="{StaticResource InfoLabelStyle}"
+	        TextColor="{DynamicResource FgColor}"
 	        VerticalOptions="Center"
 	        FontAutoScalingEnabled="True"/>
         <Label Grid.Row="1" Grid.Column="0"
                x:Name="TipLabel" Text="{x:Static languages:LocateResources.Tip_Label}"
-               FontSize="{StaticResource FontSize}" FontAttributes="Bold" TextColor="{DynamicResource FgColor}"
+               Style="{StaticResource InfoLabelStyle}"
+               TextColor="{DynamicResource FgColor}"
                FontAutoScalingEnabled="True"/>
         <Label Grid.Row="2"
                Grid.Column="0"
                x:Name="TotalLabel" Text="Total"
-               FontSize="{StaticResource FontSize}" FontAttributes="Bold" TextColor="{DynamicResource FgColor}"/>
+               Style="{StaticResource InfoLabelStyle}"
+               TextColor="{DynamicResource FgColor}"/>
 
         <!-- Right column = user input and calculated-value output-->
         <Entry
@@ -42,11 +51,15 @@
 	        x:Name="BillInput" Placeholder="{x:Static languages:LocateResources.EnterAmount_Hint}" Keyboard="Numeric" TextColor="Gray"/>
         <Label
 	        Grid.Row="1" Grid.Column="1"
-	        x:Name="TipOutput" Text="0.00" FontSize="22" TextColor="Navy"/>
+	        x:Name="TipOutput" Text="0.00" 
+	        Style="{StaticResource BaseLabelStyle}"
+	        TextColor="Navy"/>
         <Label
 	        Grid.Row="2"
 	        Grid.Column="1"
-	        x:Name="TotalOutput" Text="0.00" FontSize="22" TextColor="Navy"/>
+	        x:Name="TotalOutput" Text="0.00" 
+	        Style="{StaticResource BaseLabelStyle}"
+	        TextColor="Navy"/>
 
         <!-- Navigate to advanced view page-->
         <Button
