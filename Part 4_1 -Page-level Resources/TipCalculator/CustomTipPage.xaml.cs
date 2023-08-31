@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace TipCalculator;
 
 public partial class CustomTipPage : ContentPage
@@ -5,6 +7,13 @@ public partial class CustomTipPage : ContentPage
 	public CustomTipPage()
 	{
 		InitializeComponent();
+
+		if (CultureInfo.CurrentCulture.Name == "es-ES")
+		{
+			
+			this.LayoutRoot.WidthRequest += 1;
+			this.LayoutRoot.WidthRequest -= 1;
+		}
 
 		BillInput.TextChanged += (s, e)
 			=> CalculateTip(false, false);
@@ -43,6 +52,12 @@ public partial class CustomTipPage : ContentPage
 
 			TipOutput.Text = tip.ToString("C");
 			TotalOutput.Text = totalBill.ToString("C");
+		}
+
+		if (netBill == 0)
+		{
+			TipOutput.Text = "0";
+			TotalOutput.Text = "0";
 		}
 	}
 

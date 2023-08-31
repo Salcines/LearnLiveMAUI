@@ -102,15 +102,22 @@
 			<Button
 				Grid.Row="3"
 				Grid.Column="0"
+				VerticalOptions="Center"
+				HorizontalOptions="Center"
 				x:Name="RoundDown"
 				Text="{x:Static properties:LocateResources.RoundDown_Button}"
+				LineBreakMode="WordWrap"
+				
 				BorderColor="Pink"
 				BorderWidth="2"/>
 			<Button
 				Grid.Row="3"
 				Grid.Column="1"
+				VerticalOptions="Center"
+				HorizontalOptions="Center"
 				x:Name="RoundUp"
 				Text="{x:Static properties:LocateResources.RoundUp_Button}"
+				LineBreakMode="WordWrap"
 				BorderColor="Pink"
 				BorderWidth="2"/>
 		</Grid>

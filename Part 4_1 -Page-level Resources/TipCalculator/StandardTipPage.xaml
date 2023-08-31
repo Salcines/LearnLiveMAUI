@@ -34,7 +34,11 @@
         <Entry
 	        Grid.Row="0"
 	        Grid.Column="1"
-	        x:Name="BillInput" Placeholder="{x:Static languages:LocateResources.EnterAmount_Hint}" Keyboard="Numeric" TextColor="Gray"/>
+	        x:Name="BillInput" Placeholder="{x:Static languages:LocateResources.EnterAmount_Hint}" Keyboard="Numeric" TextColor="{DynamicResource FgColor}">
+            <Entry.PlaceholderColor>
+	            <x:DynamicResource>FgColor</x:DynamicResource>
+            </Entry.PlaceholderColor>
+        </Entry>
         <Label
 	        Grid.Row="1" Grid.Column="1"
 	        x:Name="TipOutput" Text="0.00" 

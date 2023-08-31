@@ -34,11 +34,17 @@ public partial class StandardTipPage : ContentPage
 			TipOutput.Text = tip.ToString("C");
 			TotalOutput.Text = totalBill.ToString("C");
 		}
+
+		if (netBill == 0)
+		{
+			TipOutput.Text = "0";
+			TotalOutput.Text = "0";
+		}
 	}
 
-	private void OnGotoCustom(object sender, EventArgs e)
+	private async void OnGotoCustom(object sender, EventArgs e)
 	{
-		Shell.Current.GoToAsync($"{nameof(CustomTipPage)}");
+		await Shell.Current.GoToAsync($"{nameof(CustomTipPage)}");
 	}
 
 	private void OnLight(object sender, EventArgs e)
