@@ -16,22 +16,19 @@
 	        x:Name="BillLabel"
 			VerticalOptions="Center"
 	        Text="{x:Static properties:LocateResources.Bill_Label}"
-	        FontSize="22"
-	        FontAttributes="Bold"/>
+            Style="{StaticResource InfoLabelStyle}"/>
         <Label
 	        Grid.Row="1"
 	        Grid.Column="0"
 	        x:Name="TipLabel"
 	        Text="{x:Static properties:LocateResources.Tip_Label}"
-	        FontSize="22"
-	        FontAttributes="Bold"/>
+	        Style="{StaticResource InfoLabelStyle}"/>
 		<Label
 			Grid.Row="2"
 			Grid.Column="0"
 			x:Name="TotalLabel"
 			Text="Total"
-			FontSize="22"
-			FontAttributes="Bold"/>
+			Style="{StaticResource InfoLabelStyle}"/>
 
 		<Entry
 			Grid.Row="0"
@@ -44,12 +41,13 @@
 			Grid.Column="1"
 			x:Name="TipOutput"
 			Text="0.00"
-			FontSize="22"/>
+			Style="{StaticResource InfoLabelStyle}"/>
 		<Label
 			Grid.Row="2"
 			Grid.Column="1"
 			x:Name="TotalOutput"
-			Text="0.00"/>
+			Text="0.00"
+			Style="{StaticResource InfoLabelStyle}"/>
 
 		<Grid
 			Grid.Row="3"
@@ -66,13 +64,14 @@
 				Grid.Row="0"
 				Grid.Column="0"
 				Text="{x:Static properties:LocateResources.TipPercentage_Label}"
-				FontSize="Medium"
-				FontAttributes="Bold"/>
+				Style="{StaticResource InfoLabelStyle}"
+				FontSize="Medium"/>
 			<Label
 				Grid.Row="0"
 				Grid.Column="1"
 				x:Name="TipPercentage"
 				Text="15%"
+				Style="{StaticResource InfoLabelStyle}"
 				FontSize="Medium"
 				HorizontalOptions="End"
 				VerticalTextAlignment="End"/>

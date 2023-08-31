@@ -5,20 +5,6 @@
              x:Class="TipCalculator.StandardTipPage"
              Title="{x:Static languages:LocateResources.Main_Title}">
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Color x:Key="BgColor">#C0C0C0</Color>
-            <Color x:Key="FgColor">Navy</Color>
-            <x:Double x:Key="FontSize">22</x:Double>
-            <Style x:Key="BaseLabelStyle" TargetType="Label">
-                <Setter Property="FontSize" Value="{StaticResource FontSize}"/>
-            </Style>
-            <Style x:Key="InfoLabelStyle" TargetType="Label" BasedOn="{StaticResource BaseLabelStyle}">
-                <Setter Property="FontAttributes" Value="Bold"/>
-            </Style>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-
 	<Grid
 	    x:Name="LayoutRoot"
 	    BackgroundColor="{DynamicResource BgColor}"
@@ -53,13 +39,13 @@
 	        Grid.Row="1" Grid.Column="1"
 	        x:Name="TipOutput" Text="0.00" 
 	        Style="{StaticResource BaseLabelStyle}"
-	        TextColor="Navy"/>
+	        TextColor="{DynamicResource FgColor}"/>
         <Label
 	        Grid.Row="2"
 	        Grid.Column="1"
 	        x:Name="TotalOutput" Text="0.00" 
 	        Style="{StaticResource BaseLabelStyle}"
-	        TextColor="Navy"/>
+	        TextColor="{DynamicResource FgColor}"/>
 
         <!-- Navigate to advanced view page-->
         <Button
