@@ -59,17 +59,35 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Resources\Languages\DaysOfWeek.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>DaysOfWeek.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resources\Languages\MoonPhase.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>MoonPhase.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resources\Languages\MoonPhaseName.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>MoonPhaseName.resx</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
+	  <EmbeddedResource Update="Resources\Languages\DaysOfWeek.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>DaysOfWeek.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\Languages\MoonPhase.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>MoonPhase.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Languages\MoonPhaseName.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>MoonPhaseName.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
 	</ItemGroup>
 

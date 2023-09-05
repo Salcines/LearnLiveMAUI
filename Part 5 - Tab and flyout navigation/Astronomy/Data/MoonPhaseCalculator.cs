@@ -16,7 +16,7 @@ namespace Astronomy.Data
 			WaxingGibbous,
 			Full,
 			WaningGibbous,
-			LastQuarter,
+			ThirdQuarter,
 			WaningCrescent
 	    }
 
@@ -45,7 +45,7 @@ namespace Astronomy.Data
 			    < 14 => Phase.WaxingGibbous,
 				< 15 => Phase.Full,
 				< 22 => Phase.WaningGibbous,
-				< 23 => Phase.LastQuarter,
+				< 23 => Phase.ThirdQuarter,
 				< 29 => Phase.WaningCrescent,
 			    _ => Phase.New
 		    };

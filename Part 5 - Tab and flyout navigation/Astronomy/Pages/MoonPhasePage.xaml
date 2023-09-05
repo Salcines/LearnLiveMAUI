@@ -22,7 +22,7 @@
         ColumnDefinitions="Auto, Auto, Auto, Auto">
 
 		<!-- ReSharper disable once MarkupAttributeTypo because is a file name -->
-		<Image Source="starfield.png" Aspect="AspectFill" Grid.RowSpan="4" Grid.ColumnSpan="4"/>
+		<Image Source="starfield.png" Aspect="AspectFill"  Grid.RowSpan="4" Grid.ColumnSpan="4"/>
 
         <StackLayout Grid.Row="0" Grid.ColumnSpan="4">
             <Label x:Name="DateLabel" FontAttributes="Bold"/>
