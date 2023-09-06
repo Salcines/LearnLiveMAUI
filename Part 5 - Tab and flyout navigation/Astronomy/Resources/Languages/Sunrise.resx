@@ -98,6 +98,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Title_Page" xml:space="preserve">
-    <value>Moon Phase</value>
+    <value>Sunrise and sunset</value>
+  </data>
+  <data name="Daylight_Label" xml:space="preserve">
+    <value>Daylight</value>
+  </data>
+  <data name="Sunset_Label" xml:space="preserve">
+    <value>Sunset</value>
+  </data>
+  <data name="Sunrise_Label" xml:space="preserve">
+    <value>Sunrise</value>
   </data>
 </root>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:languages="using:Astronomy.Resources.Languages"
+             x:Class="Astronomy.Pages.AboutPage"
+             Title="{x:Static languages:About.Title_Page}">
+    <StackLayout Spacing="5" Padding="10">
+        <Label Text="{Binding Source={x:Static languages:About.Version}, StringFormat='{0} 1.0.0'}"/>
+        <Label Text="{Binding Source={x:Static languages:About.API_Provider}, StringFormat='{0} https://sunrise-sunset.org/api'}"/>
+        <Label Text="{Binding Source={x:Static languages:About.Icons_Font}, StringFormat='{0} Awesome'}"/>
+    </StackLayout>
+</ContentPage>

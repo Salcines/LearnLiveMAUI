@@ -22,14 +22,14 @@ namespace Astronomy.Resources.Languages {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class MoonPhase {
+    internal class About {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal MoonPhase() {
+        internal About() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Astronomy.Resources.Languages {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Astronomy.Resources.Languages.MoonPhase", typeof(MoonPhase).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Astronomy.Resources.Languages.About", typeof(About).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,11 +61,38 @@ namespace Astronomy.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Moon Phase.
+        ///   Looks up a localized string similar to Sunrise/Sunset data provided by:.
+        /// </summary>
+        internal static string API_Provider {
+            get {
+                return ResourceManager.GetString("API_Provider", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Icons from font.
+        /// </summary>
+        internal static string Icons_Font {
+            get {
+                return ResourceManager.GetString("Icons_Font", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to About Contoso Astronomy.
         /// </summary>
         internal static string Title_Page {
             get {
                 return ResourceManager.GetString("Title_Page", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Version.
+        /// </summary>
+        internal static string Version {
+            get {
+                return ResourceManager.GetString("Version", resourceCulture);
             }
         }
     }

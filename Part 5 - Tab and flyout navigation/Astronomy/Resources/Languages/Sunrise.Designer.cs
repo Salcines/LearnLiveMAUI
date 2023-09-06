@@ -22,14 +22,14 @@ namespace Astronomy.Resources.Languages {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class MoonPhase {
+    internal class Sunrise {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal MoonPhase() {
+        internal Sunrise() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Astronomy.Resources.Languages {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Astronomy.Resources.Languages.MoonPhase", typeof(MoonPhase).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Astronomy.Resources.Languages.Sunrise", typeof(Sunrise).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,34 @@ namespace Astronomy.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Moon Phase.
+        ///   Looks up a localized string similar to Daylight.
+        /// </summary>
+        internal static string Daylight_Label {
+            get {
+                return ResourceManager.GetString("Daylight_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sunrise.
+        /// </summary>
+        internal static string Sunrise_Label {
+            get {
+                return ResourceManager.GetString("Sunrise_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sunset.
+        /// </summary>
+        internal static string Sunset_Label {
+            get {
+                return ResourceManager.GetString("Sunset_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sunrise and sunset.
         /// </summary>
         internal static string Title_Page {
             get {

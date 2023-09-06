@@ -21,10 +21,6 @@ public partial class MoonPhasePage : ContentPage
 		MoonPhaseIconLabel.Text = MoonPhaseEmojis[phase];
 		MoonPhaseTextLabel.Text = MoonPhaseName.ResourceManager.GetString(phase.ToString(), culture);
 
-
-
-		//MoonPhaseTextLabel.Text = PhaseLocalization(phase.ToString());
-
 		SetMoonPhaseLabels(PhaseIcon1Label, PhaseText1Label, 1, culture);
 		SetMoonPhaseLabels(PhaseIcon2Label, PhaseText2Label, 2, culture);
 		SetMoonPhaseLabels(PhaseIcon3Label, PhaseText3Label, 3, culture);

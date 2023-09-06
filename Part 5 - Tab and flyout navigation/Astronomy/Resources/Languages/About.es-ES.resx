@@ -118,6 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Title_Page" xml:space="preserve">
-    <value>Fase Lunar</value>
+    <value>Acerca de Astronomía Contoso</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Versión</value>
+  </data>
+  <data name="API_Provider" xml:space="preserve">
+    <value>Salida y puesta del sol proporcionados por:</value>
+  </data>
+  <data name="Icons_Font" xml:space="preserve">
+    <value>Iconos de la fuente</value>
   </data>
 </root>
