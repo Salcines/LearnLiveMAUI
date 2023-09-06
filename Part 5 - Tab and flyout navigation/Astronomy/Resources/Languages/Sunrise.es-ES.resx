@@ -121,12 +121,18 @@
     <value>Salida y puesta del sol</value>
   </data>
   <data name="Daylight_Label" xml:space="preserve">
-    <value>Mediodía</value>
+    <value>Luz diurna</value>
   </data>
   <data name="Sunset_Label" xml:space="preserve">
     <value>Puesta del sol</value>
   </data>
   <data name="Sunrise_Label" xml:space="preserve">
     <value>Salida del sol</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Horas</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>Minutos</value>
   </data>
 </root>

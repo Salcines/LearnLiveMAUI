@@ -2,5 +2,5 @@
 
 public interface ILatLogService
 {
-	Task<(double Latitude, double Logitude)> GetLatLong();
+	Task<(double Latitude, double Longitude)> GetLatLong();
 }

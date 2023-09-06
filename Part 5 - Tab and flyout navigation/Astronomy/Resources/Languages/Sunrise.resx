@@ -109,4 +109,10 @@
   <data name="Sunrise_Label" xml:space="preserve">
     <value>Sunrise</value>
   </data>
+  <data name="Hours" xml:space="preserve">
+    <value>Hours</value>
+  </data>
+  <data name="Minutes" xml:space="preserve">
+    <value>Minutes</value>
+  </data>
 </root>

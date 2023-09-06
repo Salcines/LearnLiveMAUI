@@ -29,8 +29,8 @@
             <Label Text="{x:Static properties:Sunrise.Sunset_Label}" FontAttributes="Bold" Grid.Column="2" Grid.Row="1"/>
 
             <Label x:Name="SunriseLabel" WidthRequest="100" FontAttributes="None" Grid.Column="0" Grid.Row="2" HorizontalTextAlignment="Center"/>
-            <Label x:Name="DaylightLabel" WidthRequest="100" FontAttributes="None" Grid.Column="0" Grid.Row="2" HorizontalTextAlignment="Center"/>
-            <Label x:Name="SunsetLabel" WidthRequest="100" FontAttributes="None" Grid.Column="0" Grid.Row="2" HorizontalTextAlignment="Center"/>
+            <Label x:Name="DaylightLabel" WidthRequest="100" FontAttributes="None" Grid.Column="1" Grid.Row="2" HorizontalTextAlignment="Center"/>
+            <Label x:Name="SunsetLabel" WidthRequest="100" FontAttributes="None" Grid.Column="2" Grid.Row="2" HorizontalTextAlignment="Center"/>
         </Grid>
     </StackLayout>
 </ContentPage>

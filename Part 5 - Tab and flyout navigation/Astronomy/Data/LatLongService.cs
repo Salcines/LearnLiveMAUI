@@ -2,7 +2,7 @@
 
 public class LatLongService : ILatLogService
 {
-	public async Task<(double Latitude, double Logitude)> GetLatLong()
+	public async Task<(double Latitude, double Longitude)> GetLatLong()
 	{
 		var latitudeLocation = 0.0;
 		var longitudeLocation = 0.0;
