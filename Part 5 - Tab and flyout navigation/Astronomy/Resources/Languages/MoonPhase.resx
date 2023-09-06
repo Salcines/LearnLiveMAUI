@@ -100,4 +100,7 @@
   <data name="Title_Page" xml:space="preserve">
     <value>Moon Phase</value>
   </data>
+  <data name="Astronomy" xml:space="preserve">
+    <value>Astronomy</value>
+  </data>
 </root>

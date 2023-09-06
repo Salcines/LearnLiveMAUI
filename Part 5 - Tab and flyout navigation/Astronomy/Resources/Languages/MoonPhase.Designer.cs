@@ -61,6 +61,15 @@ namespace Astronomy.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Astronomy.
+        /// </summary>
+        internal static string Astronomy {
+            get {
+                return ResourceManager.GetString("Astronomy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Moon Phase.
         /// </summary>
         internal static string Title_Page {

@@ -120,4 +120,7 @@
   <data name="Title_Page" xml:space="preserve">
     <value>Fase Lunar</value>
   </data>
+  <data name="Astronomy" xml:space="preserve">
+    <value>Astronomía</value>
+  </data>
 </root>

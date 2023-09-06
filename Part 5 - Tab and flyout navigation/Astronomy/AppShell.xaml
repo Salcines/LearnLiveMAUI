@@ -6,15 +6,19 @@
     xmlns:properties="clr-namespace:Astronomy.Resources.Languages"
     xmlns:local="clr-namespace:Astronomy.Pages">
 
-    <TabBar>
-        <Tab Title="{x:Static properties:MoonPhase.Title_Page}"
-             Icon="moon.png">
-            <ShellContent ContentTemplate="{DataTemplate local:MoonPhasePage}"/>
-        </Tab>
+    <FlyoutItem Title="{x:Static properties:MoonPhase.Astronomy}"
+                Icon="moon.png">
+        <ShellContent Title="{x:Static properties:MoonPhase.Title_Page}"
+                      Icon="moon.png"
+                      ContentTemplate="{DataTemplate local:MoonPhasePage}"/>
+        <ShellContent Title="{x:Static properties:Sunrise.Title_Page}"
+                      Icon="sun.png"
+                      ContentTemplate="{DataTemplate local:SunrisePage}"/>
+    </FlyoutItem>
 
-		<Tab Title="{x:Static properties:Sunrise.Title_Page}"
-		     Icon="sun.png">
-            <ShellContent ContentTemplate="{DataTemplate local:SunrisePage}"/>
-		</Tab>
-    </TabBar>
+    <FlyoutItem Title="{x:Static properties:About.Title_Page}"
+                Icon="question.png">
+        <ShellContent
+	        ContentTemplate="{DataTemplate local:AboutPage}"/>
+    </FlyoutItem>
 </Shell>
