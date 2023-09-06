@@ -6,27 +6,15 @@
     xmlns:properties="clr-namespace:Astronomy.Resources.Languages"
     xmlns:local="clr-namespace:Astronomy.Pages">
 
-    <Shell.FlyoutHeader>
-        <Grid HeightRequest="100" BackgroundColor="DarkSlateBlue">
-            <Image Source="moon.png"/>
-        </Grid>
-    </Shell.FlyoutHeader>
+    <TabBar>
+        <Tab Title="{x:Static properties:MoonPhase.Title_Page}"
+             Icon="moon.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MoonPhasePage}"/>
+        </Tab>
 
-	<FlyoutItem Title="{x:Static properties:MoonPhase.Title_Page}"
-            Icon="moon.png">
-    <ShellContent
-        ContentTemplate="{DataTemplate local:MoonPhasePage}"/>
-    </FlyoutItem>
-
-    <FlyoutItem Title="{x:Static properties:Sunrise.Title_Page}"
-                Icon="sun.png">
-        <ShellContent
-	        ContentTemplate="{DataTemplate local:SunrisePage}"/>
-    </FlyoutItem>
-
-    <FlyoutItem Title="{x:Static properties:About.Title_Page}"
-                Icon="question.png">
-        <ShellContent
-	        ContentTemplate="{DataTemplate local:AboutPage}"/>
-    </FlyoutItem>
+		<Tab Title="{x:Static properties:Sunrise.Title_Page}"
+		     Icon="sun.png">
+            <ShellContent ContentTemplate="{DataTemplate local:SunrisePage}"/>
+		</Tab>
+    </TabBar>
 </Shell>
