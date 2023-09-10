@@ -48,6 +48,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\comet.png" />
 	  <None Remove="Resources\Images\moon.png" />
 	  <None Remove="Resources\Images\question.png" />
 	  <None Remove="Resources\Images\starfield.png" />
@@ -59,10 +60,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Pages\AstronomicalBodyPage.xaml.cs">
+	    <DependentUpon>AstronomicalBodyPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resources\Languages\About.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>About.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Resources\Languages\AstronomicalBodies.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>AstronomicalBodies.resx</DependentUpon>
 	  </Compile>
 	  <Compile Update="Resources\Languages\DaysOfWeek.Designer.cs">
 	    <DesignTime>True</DesignTime>
@@ -91,6 +100,10 @@
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>About.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
+	  <EmbeddedResource Update="Resources\Languages\AstronomicalBodies.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>AstronomicalBodies.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
 	  <EmbeddedResource Update="Resources\Languages\DaysOfWeek.resx">
 	    <Generator>ResXFileCodeGenerator</Generator>
 	    <LastGenOutput>DaysOfWeek.Designer.cs</LastGenOutput>
@@ -111,6 +124,12 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Pages\AboutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\AstronomicalBodiesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\AstronomicalBodyPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Pages\MoonPhasePage.xaml">

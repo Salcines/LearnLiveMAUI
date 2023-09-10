@@ -22,14 +22,14 @@ namespace Astronomy.Resources.Languages {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class MoonPhaseName {
+    internal class AstronomicalBodies {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal MoonPhaseName() {
+        internal AstronomicalBodies() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Astronomy.Resources.Languages {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Astronomy.Resources.Languages.MoonPhaseName", typeof(MoonPhaseName).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Astronomy.Resources.Languages.AstronomicalBodies", typeof(AstronomicalBodies).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,74 +61,101 @@ namespace Astronomy.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to First Quarter.
+        ///   Looks up a localized string similar to Age.
         /// </summary>
-        internal static string FirstQuarter {
+        internal static string Age_Label {
             get {
-                return ResourceManager.GetString("FirstQuarter", resourceCulture);
+                return ResourceManager.GetString("Age_Label", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Full.
+        ///   Looks up a localized string similar to Billon.
         /// </summary>
-        internal static string Full {
+        internal static string Billons_Convert {
             get {
-                return ResourceManager.GetString("Full", resourceCulture);
+                return ResourceManager.GetString("Billons_Convert", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to New.
+        ///   Looks up a localized string similar to Circumference.
         /// </summary>
-        internal static string New {
+        internal static string Circumference_Label {
             get {
-                return ResourceManager.GetString("New", resourceCulture);
+                return ResourceManager.GetString("Circumference_Label", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Third Quarter.
+        ///   Looks up a localized string similar to Earth.
         /// </summary>
-        internal static string ThirdQuarter {
+        internal static string Earth_Name {
             get {
-                return ResourceManager.GetString("ThirdQuarter", resourceCulture);
+                return ResourceManager.GetString("Earth_Name", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Waning Crescent.
+        ///   Looks up a localized string similar to Halley&apos;s Comet.
         /// </summary>
-        internal static string WaningCrescent {
+        internal static string Halley_Name {
             get {
-                return ResourceManager.GetString("WaningCrescent", resourceCulture);
+                return ResourceManager.GetString("Halley_Name", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Waning Gibous.
+        ///   Looks up a localized string similar to Mass.
         /// </summary>
-        internal static string WaningGibbous {
+        internal static string Mass_Label {
             get {
-                return ResourceManager.GetString("WaningGibbous", resourceCulture);
+                return ResourceManager.GetString("Mass_Label", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Waxing Crescent.
+        ///   Looks up a localized string similar to Moon.
         /// </summary>
-        internal static string WaxingCrescent {
+        internal static string Moon_Name {
             get {
-                return ResourceManager.GetString("WaxingCrescent", resourceCulture);
+                return ResourceManager.GetString("Moon_Name", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Waxing Gibbous.
+        ///   Looks up a localized string similar to The Sun (Sol).
         /// </summary>
-        internal static string WaxingGibbous {
+        internal static string Sun_Name {
             get {
-                return ResourceManager.GetString("WaxingGibbous", resourceCulture);
+                return ResourceManager.GetString("Sun_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Astronomical Bodies.
+        /// </summary>
+        internal static string Title_Bodies {
+            get {
+                return ResourceManager.GetString("Title_Bodies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Astronomical Data.
+        /// </summary>
+        internal static string Title_Page {
+            get {
+                return ResourceManager.GetString("Title_Page", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Years.
+        /// </summary>
+        internal static string Years {
+            get {
+                return ResourceManager.GetString("Years", resourceCulture);
             }
         }
     }

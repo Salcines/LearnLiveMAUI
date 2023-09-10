@@ -97,28 +97,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="New" xml:space="preserve">
-    <value>New</value>
+  <data name="Title_Page" xml:space="preserve">
+    <value>Astronomical Data</value>
   </data>
-  <data name="WaxingCrescent" xml:space="preserve">
-    <value>Waxing Crescent</value>
+  <data name="Mass_Label" xml:space="preserve">
+    <value>Mass</value>
   </data>
-  <data name="FirstQuarter" xml:space="preserve">
-    <value>First Quarter</value>
+  <data name="Circumference_Label" xml:space="preserve">
+    <value>Circumference</value>
   </data>
-  <data name="WaxingGibbous" xml:space="preserve">
-    <value>Waxing Gibbous</value>
+  <data name="Age_Label" xml:space="preserve">
+    <value>Age</value>
   </data>
-  <data name="Full" xml:space="preserve">
-    <value>Full</value>
+  <data name="Title_Bodies" xml:space="preserve">
+    <value>Astronomical Bodies</value>
   </data>
-  <data name="WaningGibbous" xml:space="preserve">
-    <value>Waning Gibous</value>
+  <data name="Sun_Name" xml:space="preserve">
+    <value>The Sun (Sol)</value>
   </data>
-  <data name="ThirdQuarter" xml:space="preserve">
-    <value>Third Quarter</value>
+  <data name="Earth_Name" xml:space="preserve">
+    <value>Earth</value>
   </data>
-  <data name="WaningCrescent" xml:space="preserve">
-    <value>Waning Crescent</value>
+  <data name="Moon_Name" xml:space="preserve">
+    <value>Moon</value>
+  </data>
+  <data name="Halley_Name" xml:space="preserve">
+    <value>Halley's Comet</value>
+  </data>
+  <data name="Billons_Convert" xml:space="preserve">
+    <value>Billon</value>
+  </data>
+  <data name="Years" xml:space="preserve">
+    <value>Years</value>
   </data>
 </root>

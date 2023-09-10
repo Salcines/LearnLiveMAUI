@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:properties="clr-namespace:Astronomy.Resources.Languages"
+             x:Class="Astronomy.Pages.AstronomicalBodyPage"
+             Title="{x:Static properties:AstronomicalBodies.Title_Page}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="TextColor">White</Color>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource TextColor}"></Setter>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IconOverride="comet.png"/>
+    </Shell.BackButtonBehavior>
+
+    <Grid RowSpacing="10" ColumnSpacing="10"
+          ColumnDefinitions="*, *"
+          RowDefinitions="Auto, Auto, Auto, Auto, Auto, *">
+
+	    <!-- ReSharper disable once MarkupAttributeTypo because the source has a file name-->
+	    <Image 
+            Grid.RowSpan="6"
+            Grid.ColumnSpan="2"
+	        Source="starfield.png" Aspect="AspectFill"></Image>
+
+        <Label x:Name="IconLabel" FontSize="96" Grid.Row="0" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
+        <Label x:Name="NameLabel" FontSize="Medium" FontAttributes="Bold" Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="Center"/>
+
+        <Label Text="{x:Static properties:AstronomicalBodies.Mass_Label}" FontSize="Medium" FontAttributes="Bold" Grid.Row="2" HorizontalOptions="End"/>
+        <Label Text="{x:Static properties:AstronomicalBodies.Circumference_Label}" FontSize="Medium" FontAttributes="Bold" Grid.Row="3" HorizontalOptions="End"/>
+        <Label Text="{x:Static properties:AstronomicalBodies.Age_Label}" FontSize="Medium" FontAttributes="Bold" Grid.Row="4" HorizontalOptions="End"/>
+
+        <Label x:Name="MassLabel" FontSize="Medium" Grid.Row="2" Grid.Column="1"/>
+        <Label x:Name="CircumferenceLabel" FontSize="Medium" Grid.Row="3" Grid.Column="1"/>
+        <Label x:Name="AgeLabel" FontSize="Medium" Grid.Row="4" Grid.Column="1"/>
+
+    </Grid>
+</ContentPage>

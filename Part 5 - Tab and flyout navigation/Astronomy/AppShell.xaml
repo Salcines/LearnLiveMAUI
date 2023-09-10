@@ -16,6 +16,12 @@
                       ContentTemplate="{DataTemplate local:SunrisePage}"/>
     </FlyoutItem>
 
+    <FlyoutItem Title="{x:Static properties:AstronomicalBodies.Title_Page}"
+                Icon="comet.png">
+	    <ShellContent
+		    ContentTemplate="{DataTemplate local:AstronomicalBodiesPage}"/>
+    </FlyoutItem>
+
     <FlyoutItem Title="{x:Static properties:About.Title_Page}"
                 Icon="question.png">
         <ShellContent
