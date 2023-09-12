@@ -34,3 +34,8 @@ Sun data page
 Halley's comet data page
 ![This page shows halley's comet data with an astronomic body icon above and the mass, circumference and age. At left top of the page exists a comet icon to backward](Astronomy/Resources/Images/screenshots/halleybody.png)
 
+Flyout about option
+![Flyout about option selected](Astronomy/Resources/Images/screenshots/flyoutabout.png)
+
+About page
+![About page with follow information 1. App version; 2. url sunrise/sunset api: https://sunrise-sunset.org/api and 3. icons font information: Awosome](Astronomy/Resources/Images/screenshots/about.png)
