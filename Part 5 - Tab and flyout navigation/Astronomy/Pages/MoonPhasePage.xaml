@@ -19,7 +19,7 @@
 
 	<Grid RowSpacing="10" ColumnSpacing="5" Padding="5"
         RowDefinitions="Auto, Auto, Auto, *"
-        ColumnDefinitions="Auto, Auto, Auto, Auto">
+        ColumnDefinitions="auto, *, *, *">
 
 		<!-- ReSharper disable once MarkupAttributeTypo because is a file name -->
 		<Image Source="starfield.png" Aspect="AspectFill"  Grid.RowSpan="4" Grid.ColumnSpan="4"/>
