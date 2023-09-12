@@ -1,4 +1,3 @@
-using System.Globalization;
 using Astronomy.Data;
 
 namespace Astronomy.Pages;
