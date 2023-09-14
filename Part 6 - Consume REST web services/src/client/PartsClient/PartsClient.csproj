@@ -50,12 +50,34 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\Languages\AddPartView.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>AddPartView.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Views\Languages\PartView.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>PartView.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\PartsView.xaml.cs">
 	    <DependentUpon>PartsView.xaml</DependentUpon>
 	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Update="Views\Languages\AddPartView.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>AddPartView.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	  <EmbeddedResource Update="Views\Languages\PartView.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>PartView.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
 	</ItemGroup>
 
 	<ItemGroup>

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PartsClient.Views.PartsView">
+             xmlns:properties="clr-namespace:PartsClient.Views.Languages"
+             x:Class="PartsClient.Views.PartsView"
+             Title="{x:Static properties:PartView.ViewTitle}">
 
     <Grid RowDefinitions="Auto, *"
           ColumnDefinitions="*">
@@ -9,7 +11,7 @@
 		<Button
 			Grid.Row="0"
 			Grid.Column="0"
-			Text="Add New Part"
+			Text="{x:Static properties:PartView.AddNewPart}"
 			Margin="20, 10, 20, 10"
 			Command="{Binding AddNewPartCommand}"/>
 
@@ -21,7 +23,7 @@
 	        Command="{Binding LoadDataCommand}">
 			<CollectionView Margin="30, 20, 30, 30"
 			                ItemsSource="{Binding Parts}"
-			                SelectedItem="{Binding SelectPart, Mode=TwoWay}"
+			                SelectedItem="{Binding SelectedPart, Mode=TwoWay}"
 							SelectionChangedCommand="{Binding PartSelectedCommand}"
 			                SelectionMode="Single">
 				<CollectionView.ItemsLayout>
@@ -32,7 +34,7 @@
 						<VerticalStackLayout
 							Padding="15, 10"
 							Margin="10, 5, 10, 5">
-							<Label Text="{Binding PartId, StringFormat='ID: {0}'}"/>
+							<Label Text="{Binding PartId, StringFormat='ID: {0}'}" FontSize="Title" Margin="0,0,0,20"/>
 							<Label Text="{Binding PartName, StringFormat='Part Name: {0}'}"/>
 							<Label Text="{Binding PartType, StringFormat='Part Type: {0}'}"/>
 						</VerticalStackLayout>

@@ -38,7 +38,7 @@ public class Part : INotifyPropertyChanged
 			OnPropertyChanged(nameof(PartName));
 		}
 	}
-
+	/*
 	private string _supplier;
 
 	public string Supplier
@@ -54,7 +54,7 @@ public class Part : INotifyPropertyChanged
 			OnPropertyChanged(nameof(Supplier));
 		}
 	}
-
+	*/
 	private string _partType;
 
 	public string PartType
