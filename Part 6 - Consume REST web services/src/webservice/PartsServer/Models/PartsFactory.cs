@@ -1,6 +1,6 @@
 ﻿namespace PartsServer.Models;
 
-public class PartFactory
+public static class PartsFactory
 {
 	private static readonly object Locker = new();
 	public static Dictionary<string, Tuple<DateTime, List<Part>>> Parts = new();
