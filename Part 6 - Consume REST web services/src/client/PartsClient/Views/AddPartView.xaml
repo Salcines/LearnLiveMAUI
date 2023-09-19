@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:properties="clr-namespace:PartsClient.Views.Languages"
+             x:Class="PartsClient.Views.AddPartView"
+             Title="{x:Static properties:AddPartView.ViewTitle}">
+
+    <Grid RowDefinitions="*, Auto"
+          ColumnDefinitions="*, *, *">
+        <TableView Intent="Data"
+                   Grid.Row="0"
+                   Grid.ColumnSpan="3">
+            <TableRoot>
+                <TableSection Title="Part Info">
+                    <EntryCell Label="{x:Static properties:AddPartView.PartId_Entry}" Text="{Binding PartId}" IsEnabled="False"/>
+                    <EntryCell Label="{x:Static properties:AddPartView.PartName_Entry}" Text="{Binding PartName}"/>
+                    <EntryCell Label="{x:Static properties:AddPartView.PartType_Entry}" Text="{Binding PartType}"/>
+                    <EntryCell Label="{x:Static properties:AddPartView.Supplier_Entry}" Text="{Binding Suppliers}"/>
+                </TableSection>
+            </TableRoot>
+        </TableView>
+
+        <Button Text="{x:Static properties:AddPartView.Save_Button}"
+                Grid.Row="1"
+                Grid.Column="0"
+                Command="{Binding SaveCommand}"
+                Margin="20,0"/>
+        <Button Text="{x:Static properties:AddPartView.Delete_Button}"
+                Grid.Row="1"
+                Grid.Column="1"
+                Command="{Binding DeleteCommand}"/>
+        <Button Text="{x:Static properties:AddPartView.Cancel_Button}"
+                Grid.Row="1"
+                Grid.Column="2"
+                Command="{Binding DoneEditingCommand}"
+                Margin="20,0"/>
+    </Grid>
+
+</ContentPage>
