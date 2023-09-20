@@ -5,7 +5,7 @@ namespace People;
 public class PersonRepository
 {
 	private readonly string _databasePath;
-	private SQLiteConnection _connection;
+	private SQLiteAsyncConnection _connection;
 
 	public PersonRepository(string databasePath)
 	{
@@ -15,22 +15,22 @@ public class PersonRepository
 	public string StatusMessage { get; set; }
 
 
-	private void Init()
+	private async Task Init()
 	{
 		if (_connection != null)
 		{
 			return;
 		}
 
-		_connection = new SQLiteConnection(_databasePath);
-		_connection.CreateTable<Person>();
+		_connection = new SQLiteAsyncConnection(_databasePath);
+		await _connection.CreateTableAsync<Person>();
 	}
 
-	public void AddNewPerson(string name)
+	public async Task AddNewPersonAsync(string name)
 	{
 		try
 		{
-			Init();
+			await Init();
 
 			//name has been entered guard clause
 			if (string.IsNullOrEmpty(name))
@@ -38,7 +38,7 @@ public class PersonRepository
 				throw new Exception("A valid name is required");
 			}
 
-			var result = _connection.Insert(new Person {Name = name});
+			var result = await _connection.InsertAsync(new Person {Name = name});
 
 			StatusMessage = string.Format($"{result} record(s) added (Name: {name}");
 		}
@@ -48,13 +48,13 @@ public class PersonRepository
 		}
 	}
 
-	public List<Person> GetAllPeople()
+	public async Task<List<Person>> GetAllPeopleAsync()
 	{
 		try
 		{
-			Init();
+			await Init();
 
-			return _connection.Table<Person>().ToList();
+			return await _connection.Table<Person>().ToListAsync();
 		}
 		catch (Exception ex)
 		{

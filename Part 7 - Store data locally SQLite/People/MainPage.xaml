@@ -9,7 +9,8 @@
           ColumnDefinitions="*">
 
 		<Entry x:Name="NewPerson"
-               Placeholder="Enter name"/>
+               Placeholder="Enter name"
+               TextChanged="NewPersonTextChanged"/>
 
 		<Button Text="Add Person"
                 Grid.Row="1"

@@ -1,4 +1,6 @@
-﻿namespace People;
+﻿using People.Models;
+
+namespace People;
 
 public partial class MainPage : ContentPage
 {
@@ -7,21 +9,31 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
-	private void OnNewButtonClicked(object sender, EventArgs e)
+	private async void OnNewButtonClicked(object sender, EventArgs e)
 	{
 		StatusMessage.Text = "";
 
-		App.PersonRepository.AddNewPerson(NewPerson.Text);
+		await App.PersonRepository.AddNewPersonAsync(NewPerson.Text);
 		StatusMessage.Text = App.PersonRepository.StatusMessage;
+
+		NewPerson.Text = string.Empty;
 	}
 
-	private void OnGetButtonClicked(object sender, EventArgs e)
+	private async void OnGetButtonClicked(object sender, EventArgs e)
 	{
 		StatusMessage.Text = "";
 
-		var people = App.PersonRepository.GetAllPeople();
+		var people = await App.PersonRepository.GetAllPeopleAsync();
 
 		PeopleList.ItemsSource = people;
+	}
+
+	private void NewPersonTextChanged(object sender, TextChangedEventArgs e)
+	{
+		if (NewPerson.Text != string.Empty)
+		{
+			PeopleList.ItemsSource = new List<Person>();
+		}
 	}
 }
 
