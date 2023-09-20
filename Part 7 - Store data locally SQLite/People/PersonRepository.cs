@@ -1,31 +1,36 @@
-﻿namespace People;
+﻿using People.Models;
 
-public class PeopleRepository
+namespace People;
+
+public class PersonRepository
 {
 	private readonly string _databasePath;
+	private SQLiteConnection _connection;
 
-	public PeopleRepository(string databasePath)
+	public PersonRepository(string databasePath)
 	{
 		_databasePath = databasePath;
 	}
 
 	public string StatusMessage { get; set; }
 
-	//TODO: Add variable for the SQLite connection
-
 
 	private void Init()
 	{
-		//TODO: Add code to initialize the repository
+		if (_connection != null)
+		{
+			return;
+		}
+
+		_connection = new SQLiteConnection(_databasePath);
+		_connection.CreateTable<Person>();
 	}
 
 	public void AddNewPerson(string name)
 	{
-		int result = 0;
-
 		try
 		{
-			// TODO: Call Init()
+			Init();
 
 			//name has been entered guard clause
 			if (string.IsNullOrEmpty(name))
@@ -33,9 +38,7 @@ public class PeopleRepository
 				throw new Exception("A valid name is required");
 			}
 
-			// TODO: Insert the new person into the database
-
-			result = 0;
+			var result = _connection.Insert(new Person {Name = name});
 
 			StatusMessage = string.Format($"{result} record(s) added (Name: {name}");
 		}
@@ -47,10 +50,11 @@ public class PeopleRepository
 
 	public List<Person> GetAllPeople()
 	{
-		//TODO: Init them retrieve a list of Person objects from the database into a list
 		try
 		{
+			Init();
 
+			return _connection.Table<Person>().ToList();
 		}
 		catch (Exception ex)
 		{

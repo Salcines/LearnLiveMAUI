@@ -14,7 +14,10 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
 
-		// TODO: Add statements for adding PersonRepository as a singleton
+		string databasePath = FileAccessHelper.GetLocalFilePath("people.db3");
+
+		builder.Services.AddSingleton<PersonRepository>(s =>
+			ActivatorUtilities.CreateInstance<PersonRepository>(s, databasePath));
 
 #if DEBUG
 		builder.Logging.AddDebug();

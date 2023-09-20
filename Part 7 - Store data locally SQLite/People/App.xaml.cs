@@ -2,12 +2,13 @@
 
 public partial class App : Application
 {
-	public App()
+	public static PersonRepository PersonRepository { get; private set; }
+	public App(PersonRepository repository)
 	{
 		InitializeComponent();
 
 		MainPage = new AppShell();
 
-		// TODO: Initialize the repository property with the PersonRepository singleton object
+		PersonRepository = repository;
 	}
 }
